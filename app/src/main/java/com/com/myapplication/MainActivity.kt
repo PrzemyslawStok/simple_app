@@ -2,23 +2,34 @@ package com.com.myapplication
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
-    val counter = 0
+    var counter = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val mainLayout: LinearLayout = findViewById(R.id.main_layout)
+
         val textview1: TextView = findViewById(R.id.textView1)
-        textview1.setText("Nowy tekst")
+        textview1.setText("$counter")
 
         val startButton: Button = findViewById(R.id.button_start)
         startButton.setOnClickListener {
-            textview1.setText("Kolejny tekst: $counter")
+
+            Toast.makeText(this,"Naciśnięto start",Toast.LENGTH_SHORT).show()
         }
+
+        mainLayout.setOnClickListener{
+            textview1.setText("$counter")
+            counter++
+        }
+
 
     }
 }
