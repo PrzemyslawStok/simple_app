@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         val startButton: Button = findViewById(R.id.button_start)
         startButton.setOnClickListener {
-            textview1.setText("Kolejny tekst")
+            textview1.setText("Kolejny tekst: $counter")
         }
 
     }
