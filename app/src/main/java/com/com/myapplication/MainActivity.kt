@@ -1,5 +1,6 @@
 package com.com.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.LinearLayout
@@ -22,10 +23,14 @@ class MainActivity : AppCompatActivity() {
         val startButton: Button = findViewById(R.id.button_start)
         startButton.setOnClickListener {
 
-            Toast.makeText(this,"Naciśnięto start",Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, Activity1::class.java)
+            startActivity(intent)
+
+            Toast.makeText(this, "Naciśnięto start", Toast.LENGTH_SHORT).show()
+
         }
 
-        mainLayout.setOnClickListener{
+        mainLayout.setOnClickListener {
             textview1.setText("$counter")
             counter++
         }
