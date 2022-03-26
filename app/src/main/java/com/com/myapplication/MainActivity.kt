@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
 
             Toast.makeText(this, "Naciśnięto start", Toast.LENGTH_SHORT).show()
-
         }
 
         mainLayout.setOnClickListener {
