@@ -34,6 +34,13 @@ class MainActivity : AppCompatActivity() {
             counter++
         }
 
+        val activity2Button: Button = findViewById(R.id.button_activity2)
+        activity2Button.setOnClickListener {
+
+            val intent = Intent(this, Activity2::class.java)
+            startActivity(intent)
+        }
+
 
     }
 }
