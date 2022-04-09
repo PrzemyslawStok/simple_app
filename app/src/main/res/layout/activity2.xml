@@ -60,7 +60,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:layout_weight="1"
-            android:background="#085D67"
+            android:background="#15A0B1"
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatButton
@@ -70,6 +70,13 @@
                 android:text="@string/start"
                 android:textColor="#ECECEC" />
         </LinearLayout>
+
+        <View
+            android:id="@+id/view2b"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#038998" />
 
     </LinearLayout>
 
