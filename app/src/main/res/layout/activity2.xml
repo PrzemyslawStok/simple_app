@@ -4,13 +4,40 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <View
+    <LinearLayout
         android:id="@+id/view1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1"
-        android:background="#009688" />
+        android:background="#009688"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/view1a"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="#009688" />
+
+        <View
+            android:id="@+id/view1b"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="#006E64" />
+
+        <View
+            android:id="@+id/view1c"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:background="#004A43" />
+
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/view2"
@@ -21,9 +48,11 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#11B3C6"
+            android:textColor="#ECECEC"
             android:text="@string/start" />
 
     </LinearLayout>
