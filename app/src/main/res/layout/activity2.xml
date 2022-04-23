@@ -53,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="@color/view2a" />
+            android:background="@color/view2a" />
 
         <LinearLayout
             android:id="@+id/view2b"
@@ -77,7 +77,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="@color/view2c" />
+            android:background="@color/view2c" />
 
     </LinearLayout>
 

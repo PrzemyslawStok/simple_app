@@ -31,10 +31,17 @@ class Activity2 : AppCompatActivity() {
             binding.view3a, binding.view3b, binding.view3c
         )
 
+        viewList.mapIndexed { index, view ->
+            view.setOnClickListener {
+                if (index < 8) {
+                    it.setBackgroundColor(colorList[index + 1])
+                } else
+                    it.setBackgroundColor(colorList[0])
 
-        viewList[0].setOnClickListener {
-            val color = colorList[8]
-            viewList[0].setBackgroundColor(color)
+
+            }
         }
+
+
     }
 }
