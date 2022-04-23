@@ -19,7 +19,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
-            android:background="#009688" />
+            android:background="@color/view1a" />
 
         <View
             android:id="@+id/view1b"
@@ -27,7 +27,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
-            android:background="#006E64" />
+            android:background="@color/view1b" />
 
         <View
             android:id="@+id/view1c"
@@ -35,7 +35,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
-            android:background="#004A43" />
+            android:background="@color/view1c" />
 
     </LinearLayout>
 
@@ -53,13 +53,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="#038998" />
+            android:backgroundTint="@color/view2a" />
 
         <LinearLayout
+            android:id="@+id/view2b"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#15A0B1"
+            android:background="@color/view2b"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -72,11 +73,11 @@
         </LinearLayout>
 
         <View
-            android:id="@+id/view2b"
+            android:id="@+id/view2c"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:backgroundTint="#038998" />
+            android:backgroundTint="@color/view2c" />
 
     </LinearLayout>
 
@@ -93,7 +94,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
-            android:background="#FFEB3B" />
+            android:background="@color/view3a" />
 
         <View
             android:id="@+id/view3b"
@@ -101,7 +102,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
-            android:background="#FFC107" />
+            android:background="@color/view3b" />
 
         <View
             android:id="@+id/view3c"
@@ -109,7 +110,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:layout_weight="1"
-            android:background="#FF9800" />
+            android:background="@color/view3c" />
     </LinearLayout>
 
 

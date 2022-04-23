@@ -15,6 +15,5 @@ class Activity2 : AppCompatActivity() {
         val view1a = binding.view1a
         val view1b = binding.view1b
 
-
     }
 }
