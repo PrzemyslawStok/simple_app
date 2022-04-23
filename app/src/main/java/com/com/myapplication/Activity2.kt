@@ -38,7 +38,6 @@ class Activity2 : AppCompatActivity() {
                 } else
                     it.setBackgroundColor(colorList[0])
 
-
             }
         }
 
