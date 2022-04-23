@@ -12,6 +12,9 @@ class Activity2 : AppCompatActivity() {
         val binding = Activity2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val view1a = binding.view1a
+        val view1b = binding.view1b
+
 
     }
 }
