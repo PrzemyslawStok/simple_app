@@ -13,9 +13,6 @@ class Activity2 : AppCompatActivity() {
         val binding = Activity2Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val view1a = binding.view1a
-        val view1b = binding.view1b
-
         val colorList = arrayListOf(
             R.color.view1a,
             R.color.view1b,
@@ -28,10 +25,16 @@ class Activity2 : AppCompatActivity() {
             R.color.view3c
         ).map { ContextCompat.getColor(this, it) }
 
+        val viewList = arrayListOf(
+            binding.view1a, binding.view1b, binding.view1c,
+            binding.view2a, binding.view2b, binding.view2c,
+            binding.view3a, binding.view3b, binding.view3c
+        )
 
-        view1a.setOnClickListener {
+
+        viewList[0].setOnClickListener {
             val color = colorList[8]
-            view1a.setBackgroundColor(color)
+            viewList[0].setBackgroundColor(color)
         }
     }
 }
