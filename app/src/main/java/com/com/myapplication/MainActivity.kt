@@ -41,6 +41,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val constraintActivityButton: Button = findViewById(R.id.button_activity_3)
+
 
     }
 }
