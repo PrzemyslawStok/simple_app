@@ -43,6 +43,12 @@ class MainActivity : AppCompatActivity() {
 
         val constraintActivityButton: Button = findViewById(R.id.button_activity_3)
 
+        constraintActivityButton.setOnClickListener {
+
+            val intent = Intent(this, Activity3::class.java)
+            startActivity(intent)
+        }
+
 
     }
 }
