@@ -3,4 +3,5 @@
     <string name="start">Start</string>
     <string name="hello">Text View</string>
     <string name="activity2">activity2</string>
+    <string name="constraint_activity">Constraint activity</string>
 </resources>
