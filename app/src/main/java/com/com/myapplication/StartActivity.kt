@@ -1,5 +1,6 @@
 package com.com.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.com.myapplication.databinding.Activity1Binding
@@ -24,6 +25,13 @@ class StartActivity : AppCompatActivity() {
         bundle?.let {
             counter = it.getInt("Counter", 0)
             counterView.setText("$counter")
+        }
+
+        binding.returnButton.setOnClickListener {
+            val intent = Intent()
+            intent.putExtra("Counter", counter)
+            setResult(RESULT_OK)
+            finish()
         }
     }
 }
