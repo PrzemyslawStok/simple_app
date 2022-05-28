@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         val startButton: Button = findViewById(R.id.button_start)
         startButton.setOnClickListener {
 
-            val intent = Intent(this, Activity1::class.java)
+            val intent = Intent(this, StartActivity::class.java)
             startActivity(intent)
 
             Toast.makeText(this, "Naciśnięto start", Toast.LENGTH_SHORT).show()

@@ -3,7 +3,7 @@ package com.com.myapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class Activity1 : AppCompatActivity() {
+class StartActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity1)
