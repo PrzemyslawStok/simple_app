@@ -10,5 +10,12 @@ class StartActivity : AppCompatActivity() {
 
         val binding = Activity1Binding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val bundle = intent.extras
+
+        bundle?.let {
+            val counter = it.getInt("Counter", 0)
+
+        }
     }
 }
