@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         mainLayout.setOnClickListener {
-            textview1.setText("$counter")
             counter++
+            textview1.setText("$counter")
         }
 
         val activity2Button: Button = findViewById(R.id.button_activity2)
