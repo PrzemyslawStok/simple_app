@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.com.myapplication.databinding.Activity1Binding
 
 class StartActivity : AppCompatActivity() {
+    var counter = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -12,10 +14,16 @@ class StartActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val bundle = intent.extras
+        val counterView = binding.counterTextView
+
+        counterView.setOnClickListener {
+            counter++
+            counterView.setText("$counter")
+        }
 
         bundle?.let {
-            val counter = it.getInt("Counter", 0)
-            binding.counterTextView.setText("$counter")
+            counter = it.getInt("Counter", 0)
+            counterView.setText("$counter")
         }
     }
 }
