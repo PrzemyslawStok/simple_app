@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         startButton.setOnClickListener {
 
             val intent = Intent(this, StartActivity::class.java)
+            intent.putExtra("Counter", counter)
             startActivity(intent)
 
             Toast.makeText(this, "Naciśnięto start", Toast.LENGTH_SHORT).show()
