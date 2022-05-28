@@ -15,7 +15,7 @@ class StartActivity : AppCompatActivity() {
 
         bundle?.let {
             val counter = it.getInt("Counter", 0)
-            binding.counterTextView.setText("1")
+            binding.counterTextView.setText("$counter")
         }
     }
 }
