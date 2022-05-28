@@ -25,7 +25,8 @@ class MainActivity : AppCompatActivity() {
 
             val intent = Intent(this, StartActivity::class.java)
             intent.putExtra("Counter", counter)
-            startActivity(intent)
+            //startActivity(intent)
+            startActivityForResult(intent, 10)
 
             Toast.makeText(this, "Naciśnięto start", Toast.LENGTH_SHORT).show()
         }
@@ -59,5 +60,9 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
     }
 }
