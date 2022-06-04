@@ -61,6 +61,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra(counterName, counter)
             //startActivity(intent)
             startActivityForResult(intent, requestCodeStart)
+            //registerForActivityResult()
 
             Toast.makeText(this, "Naciśnięto start", Toast.LENGTH_SHORT).show()
         }
