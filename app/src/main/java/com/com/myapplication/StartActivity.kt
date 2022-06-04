@@ -30,7 +30,7 @@ class StartActivity : AppCompatActivity() {
         binding.returnButton.setOnClickListener {
             val intent = Intent()
             intent.putExtra(MainActivity.counterName, counter)
-            setResult(RESULT_OK)
+            setResult(RESULT_OK, intent)
             finish()
         }
     }

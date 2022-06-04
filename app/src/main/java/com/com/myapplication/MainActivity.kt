@@ -82,11 +82,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun resultStartActivity(resultCode: Int, data: Intent?) {
-        Toast.makeText(this, "resultCode $resultCode", Toast.LENGTH_LONG)
-            .show()
         when (resultCode) {
             RESULT_OK -> {
                 data?.let {
+                    Toast.makeText(this, "resultCode $resultCode", Toast.LENGTH_LONG)
+                        .show()
+
+                    val bundle = intent.extras
+
+                    bundle?.let {
+                        counter = it.getInt(MainActivity.counterName, 0)
+                    }
                 }
             }
             RESULT_CANCELED -> {
