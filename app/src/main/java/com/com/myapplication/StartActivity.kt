@@ -23,13 +23,13 @@ class StartActivity : AppCompatActivity() {
         }
 
         bundle?.let {
-            counter = it.getInt("Counter", 0)
+            counter = it.getInt(MainActivity.counterName, 0)
             counterView.setText("$counter")
         }
 
         binding.returnButton.setOnClickListener {
             val intent = Intent()
-            intent.putExtra("Counter", counter)
+            intent.putExtra(MainActivity.counterName, counter)
             setResult(RESULT_OK)
             finish()
         }

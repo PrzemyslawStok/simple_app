@@ -11,6 +11,12 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity() {
     var counter = 0
 
+    companion object {
+        val counterName = "counter"
+
+        val requestCodeStart = 10
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -19,17 +25,6 @@ class MainActivity : AppCompatActivity() {
 
         val textview1: TextView = findViewById(R.id.textView1)
         textview1.setText("$counter")
-
-        val startButton: Button = findViewById(R.id.button_start)
-        startButton.setOnClickListener {
-
-            val intent = Intent(this, StartActivity::class.java)
-            intent.putExtra("Counter", counter)
-            //startActivity(intent)
-            startActivityForResult(intent, 10)
-
-            Toast.makeText(this, "Naciśnięto start", Toast.LENGTH_SHORT).show()
-        }
 
         mainLayout.setOnClickListener {
             counter++
@@ -59,10 +54,44 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val startButton: Button = findViewById(R.id.button_start)
+        startButton.setOnClickListener {
+
+            val intent = Intent(this, StartActivity::class.java)
+            intent.putExtra(counterName, counter)
+            //startActivity(intent)
+            startActivityForResult(intent, requestCodeStart)
+
+            Toast.makeText(this, "Naciśnięto start", Toast.LENGTH_SHORT).show()
+        }
 
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+
+        //Toast.makeText(this, "requestCode $requestCode, resultCode $resultCode", Toast.LENGTH_LONG)
+        //    .show()
+
+        when (requestCode) {
+            requestCodeStart -> {
+                resultStartActivity(resultCode, data)
+            }
+        }
+
         super.onActivityResult(requestCode, resultCode, data)
+    }
+
+    fun resultStartActivity(resultCode: Int, data: Intent?) {
+        Toast.makeText(this, "resultCode $resultCode", Toast.LENGTH_LONG)
+            .show()
+        when (resultCode) {
+            RESULT_OK -> {
+                data?.let {
+                }
+            }
+            RESULT_CANCELED -> {
+
+            }
+        }
     }
 }
