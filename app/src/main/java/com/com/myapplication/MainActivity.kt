@@ -73,16 +73,15 @@ class MainActivity : AppCompatActivity() {
 
         val getResult =
             registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-
+                resultStartActivity(it.resultCode, it.data)
             }
 
-        startButtonR.setOnClickListener{
+        startButtonR.setOnClickListener {
             val intent = Intent(this, StartActivity::class.java)
             intent.putExtra(counterName, counter)
 
             getResult.launch(intent)
         }
-
 
 
     }
