@@ -27,7 +27,7 @@ class StartActivity : AppCompatActivity() {
             counterView.setText("$counter")
         }
 
-        binding.returnButton.setOnClickListener {
+        binding.okButton.setOnClickListener {
             val intent = Intent()
             intent.putExtra(MainActivity.counterName, counter)
             setResult(RESULT_OK, intent)
