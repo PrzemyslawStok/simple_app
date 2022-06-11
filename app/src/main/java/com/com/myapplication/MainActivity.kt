@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     var counter = 0
+    var counterTextView: TextView? = null
 
     companion object {
         val counterName = "counter"
@@ -23,12 +24,12 @@ class MainActivity : AppCompatActivity() {
 
         val mainLayout: LinearLayout = findViewById(R.id.main_layout)
 
-        val textview1: TextView = findViewById(R.id.textView1)
-        textview1.setText("$counter")
+        counterTextView = findViewById(R.id.textView1)
+        counterTextView?.setText("$counter")
 
         mainLayout.setOnClickListener {
             counter++
-            textview1.setText("$counter")
+            counterTextView?.setText("$counter")
         }
 
         val activity2Button: Button = findViewById(R.id.button_activity2)
@@ -89,10 +90,11 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this, "resultCode $resultCode", Toast.LENGTH_LONG)
                         .show()
 
-                    val bundle = intent.extras
+                    val bundle = it.extras
 
                     bundle?.let {
                         counter = it.getInt(MainActivity.counterName, 0)
+                        counterTextView?.setText("$counter")
                     }
                 }
             }
