@@ -15,12 +15,24 @@
         android:text="@string/hello"
         android:textSize="50sp" />
 
-    <Button
-        android:id="@+id/button_start"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="@string/start" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start" />
+
+        <Button
+            android:id="@+id/button_start_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_register" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/button_activity2"

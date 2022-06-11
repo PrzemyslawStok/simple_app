@@ -35,7 +35,8 @@ class StartActivity : AppCompatActivity() {
         }
 
         binding.cancelButton.setOnClickListener {
-
+            setResult(RESULT_CANCELED, intent)
+            finish()
         }
     }
 }

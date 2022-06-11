@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -56,13 +57,21 @@ class MainActivity : AppCompatActivity() {
         }
 
         val startButton: Button = findViewById(R.id.button_start)
+
+        val getResult =
+            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+
+            }
+
         startButton.setOnClickListener {
 
             val intent = Intent(this, StartActivity::class.java)
             intent.putExtra(counterName, counter)
             //startActivity(intent)
-            startActivityForResult(intent, requestCodeStart)
-            //registerForActivityResult()
+
+            //startActivityForResult(intent, requestCodeStart)
+
+            getResult.launch(intent)
 
             Toast.makeText(this, "Naciśnięto start", Toast.LENGTH_SHORT).show()
         }
@@ -99,7 +108,8 @@ class MainActivity : AppCompatActivity() {
                 }
             }
             RESULT_CANCELED -> {
-
+                Toast.makeText(this, "Anulowano", Toast.LENGTH_LONG)
+                    .show()
             }
         }
     }
