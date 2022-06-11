@@ -57,11 +57,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         val startButton: Button = findViewById(R.id.button_start)
+        val startButtonR: Button = findViewById(R.id.button_start_register)
 
-        val getResult =
-            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-
-            }
 
         startButton.setOnClickListener {
 
@@ -69,12 +66,24 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra(counterName, counter)
             //startActivity(intent)
 
-            //startActivityForResult(intent, requestCodeStart)
-
-            getResult.launch(intent)
+            startActivityForResult(intent, requestCodeStart)
 
             Toast.makeText(this, "Naciśnięto start", Toast.LENGTH_SHORT).show()
         }
+
+        val getResult =
+            registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+
+            }
+
+        startButtonR.setOnClickListener{
+            val intent = Intent(this, StartActivity::class.java)
+            intent.putExtra(counterName, counter)
+
+            getResult.launch(intent)
+        }
+
+
 
     }
 
