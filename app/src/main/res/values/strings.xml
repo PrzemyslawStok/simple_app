@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="start">Start</string>
+    <string name="start_2x">Start_2x</string>
     <string name="start_register">Start R</string>
     <string name="hello">Text View</string>
     <string name="activity2">activity2</string>
