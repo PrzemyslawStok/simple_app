@@ -23,7 +23,7 @@ class StartActivity : AppCompatActivity() {
                 1 -> counter++
                 2 -> counter += 2
             }
-            counter++
+
             counterView.setText("$counter")
         }
 
