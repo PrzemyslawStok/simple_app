@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         val counterName = "counter"
+        val counterSource = "counterSource"
 
         val requestCodeStart = 10
     }
@@ -58,12 +59,26 @@ class MainActivity : AppCompatActivity() {
 
         val startButton: Button = findViewById(R.id.button_start)
         val startButtonR: Button = findViewById(R.id.button_start_register)
+        val startButton2x: Button = findViewById(R.id.button_start_1)
 
 
         startButton.setOnClickListener {
 
             val intent = Intent(this, StartActivity::class.java)
             intent.putExtra(counterName, counter)
+            intent.putExtra(counterSource, 1)
+            //startActivity(intent)
+
+            startActivityForResult(intent, requestCodeStart)
+
+            Toast.makeText(this, "Naciśnięto start", Toast.LENGTH_SHORT).show()
+        }
+
+        startButton2x.setOnClickListener {
+
+            val intent = Intent(this, StartActivity::class.java)
+            intent.putExtra(counterName, counter)
+            intent.putExtra(counterSource, 2)
             //startActivity(intent)
 
             startActivityForResult(intent, requestCodeStart)
@@ -79,6 +94,7 @@ class MainActivity : AppCompatActivity() {
         startButtonR.setOnClickListener {
             val intent = Intent(this, StartActivity::class.java)
             intent.putExtra(counterName, counter)
+            intent.putExtra(counterSource, 1)
 
             getResult.launch(intent)
         }
